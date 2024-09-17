@@ -288,6 +288,7 @@
    */
   
   [type="search"] {
+    appearance: textfield; 
     -webkit-appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
   }
