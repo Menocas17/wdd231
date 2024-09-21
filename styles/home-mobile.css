@@ -1,0 +1,198 @@
+:root {
+    --primary-color: #264D6C;
+    --secondary-color: #333333;
+
+    --primary-constrast: #FFFFFF;
+    --secondary-contrast: #FCF671;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+body {
+    font-family: "Roboto", system-ui;
+    font-size: 1.6rem;
+    line-height:1.5;
+}
+
+.container {
+    width: min(90%, 120rem);
+    margin: 0 auto
+}
+h1, h2, h3 {
+    font-weight: 900;
+    font-family: "Roboto", system-ui;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.2rem;
+}
+h3 {
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+    display:block
+}
+
+/* Styling the header  */
+
+.header {
+    display: flex;
+    gap: 2.5rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-contrast);
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+.profile-photo {
+    border-radius: 4rem;
+}
+
+#menu {
+    font-size: 5rem;
+    background: none;
+    border: none;
+    color: var(--primary-constrast);
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+}
+
+
+#menu::before {
+	content: "☰";
+}
+
+
+.navigation {
+    background-color: var(--secondary-color);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.open {
+    display: flex;
+}
+
+.navigation a {
+    color: var(--primary-constrast);
+    text-decoration: none;
+    font-size: 2.5rem;
+}
+
+.navigation a:hover {
+    color: var(--secondary-contrast);
+}
+
+.navigation a.current {
+    color: var(--secondary-contrast);
+}
+
+
+/* styling the main  */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+
+section {
+    border: 2px solid #33333332;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    background-color: var(--primary-color);
+    color: var(--primary-constrast);
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+section nav {
+    border-bottom: 1px solid #33333332;
+    display: flex;
+    justify-content: center;
+}
+
+section button {
+    background-color: var(--secondary-color);
+    color: var(--primary-constrast);
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-radius: .5rem;
+    border: none;
+}
+
+section figcaption {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+section button.active {
+    background-color: var(--primary-color);
+    color: var(--primary-constrast);
+}
+
+
+#courses {
+    list-style: none;
+    margin: 2rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.course-item {
+    background-color: #33333332;
+    padding: 1.5rem;
+    width: 90%;
+    font-weight: 900;
+    text-align: center;
+    border: 1px solid #33333375;
+    border-radius: .5rem;
+
+}
+
+.course-item.completed {
+    background-color: #3b9a7c;
+}
+
+
+
+
+
+/* Styling the footer */
+
+.footer {
+    padding-top: 1rem;
+    background-color: var(--primary-color);
+    height: 10rem;
+    color: var(--primary-constrast);
+    text-align: center;
+}
+
+.last-modification{
+ color: var(--secondary-contrast);
+}
+

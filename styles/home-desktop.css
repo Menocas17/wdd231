@@ -1,0 +1,78 @@
+@media (min-width: 764px) { 
+
+
+  h1::before {
+    content: 'WDD231 - Web Frontend Development I - ';
+    color: var(--primary-constrast);
+   }
+
+   .profile-photo {
+    border-radius: 3rem;
+    margin-right: 5rem;
+}
+
+   .header {
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    text-align: center;
+   }
+
+   .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+    
+   }
+
+
+
+   #menu {
+    display: none;
+   }
+
+   .main-content {
+     display: grid;
+     gap: 2rem;
+     grid-template-columns: repeat(2, 1fr);
+   }
+
+    .courses-section {
+    grid-column: 1 / 3;
+   }
+
+   #courses {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns:  repeat(3, 1fr);
+    padding: 2rem;
+   }
+
+   .course-item {
+    width: 100%;
+   }
+
+
+
+}
+
+
+@media (min-width: 1400px) { 
+
+ h1 {
+    font-size: 4rem;
+ }
+ h2 {
+    font-size: 2.8rem;
+ }
+ h3 {
+    font-size: 2.5rem;
+ }
+
+.profile-photo {
+    margin-right: 5rem;
+}
+   
+
+}
