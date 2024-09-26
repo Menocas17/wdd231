@@ -100,6 +100,16 @@ const courses = [
     }
 ]
 
+const numberOfCredits = document.querySelector('#credits');
+
+
+const totalNumberOfCredits = courses.reduce((previousCredits, course) => {
+    return previousCredits + course.credits;
+}, 0);
+
+numberOfCredits.textContent = `(${totalNumberOfCredits} total credits required)`;
+
+
 const courseList = document.querySelector('#courses');
 
 function createCourseItem (filteredCourses) {
