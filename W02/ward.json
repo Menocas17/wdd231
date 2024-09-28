@@ -1,0 +1,25 @@
+{
+    "familyName": "Menocal Castillo",
+    "moveInDate": "08-19-2023",
+    "numberOfFamilyMembers": 6,
+    "bishopricVisited": true,
+    "familyMember": [
+        {
+            "name": "Rodolfo Menocal",
+            "geender": "male",
+            "birthday": "06-17-2000"
+        },
+        {
+            "name":"Felix Menocal",
+            "gender": "male",
+            "birthday": "10-03-1961"
+        },
+        {
+            "name": "Juana Castillo",
+            "gender": "female",
+            "birthday": "06-12-1966"
+
+        }
+    ]
+
+}
