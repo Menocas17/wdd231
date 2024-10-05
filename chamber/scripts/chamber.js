@@ -88,7 +88,8 @@ const membersDirectory = async (data) => {
 
 // Home Page scripts 
 
-const weatherIcon = document.querySelector('#weather-icon');
+const weatherIcon = document.createElement('img');
+const weatherDisplay = document.querySelector('.weather-display')
 const weatherInfo = document.querySelector('#weather-info');
 const forecastInfo = document.querySelector('#forecast-weather-info');
 const advertising = document.querySelector('#advertising');
@@ -184,6 +185,7 @@ function populatingCurrentWeather (data){
     weatherIcon.setAttribute('alt', 'The curretn weather icon');
     weatherIcon.setAttribute('width', 150);
     weatherIcon.setAttribute('height', 150);
+    weatherDisplay.appendChild(weatherIcon);
 
     const sunriseTimestamp = data.sys.sunrise; 
     const sunsetTimestamp = data.sys.sunset;

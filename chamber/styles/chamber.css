@@ -426,7 +426,7 @@ footer img {
 
 .weather-display {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+
     grid-template-columns: repeat(
         auto-fit,
         minmax(130px, 1fr)
@@ -434,6 +434,12 @@ footer img {
     align-items: center;
     justify-items: center;
    padding: 1rem;
+   direction: rtl;
+}
+
+.weather-display > * {
+    direction: ltr;
+
 }
 
 #weather-info {
