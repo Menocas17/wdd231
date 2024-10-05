@@ -5,6 +5,7 @@
     --Secondary-Color-Var: #ffc021ee;
 }
 
+/* Global Styles, navegation bar and footer  */
 
 html {
     box-sizing: border-box;
@@ -38,7 +39,6 @@ h1 {
 }
 
 
-/* Styling the header  */
 
 .header {
     display: flex;
@@ -105,8 +105,6 @@ h1 {
     font-size: 2rem;
 }
 
-
-
 .nav-menu a::after {
     content: '';
     position: absolute;
@@ -126,7 +124,6 @@ h1 {
     transform: translateX(-50%);
 }
 
-
 .nav-menu a.active::after {
     content: "";
     position: absolute;
@@ -137,7 +134,6 @@ h1 {
     background-color: var(--Primary-Color); 
     transition: none;
   }
-
 
 #menu {
     background: none;
@@ -157,7 +153,43 @@ h1 {
     content: 'X';
 }
 
-/* Styling the main section  */
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: left;
+    padding: 0 0 2rem 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+    
+}
+
+footer img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.social-media-links {
+    display: flex;
+    align-items: center;
+    gap: 2.3rem;
+   
+    
+}
+
+.social-media-links a {
+    transition: transform 0.3s ease;
+}
+
+.social-media-links a:hover {
+    transform: scale(1.2);
+}
+
+.student-info p {
+    margin: 0 0 .4rem 0;
+    
+}
+
+/* Styling the directory page */
 
 .directory-tittle {
     font-size: 3.5rem;
@@ -194,8 +226,6 @@ h1 {
     padding: 1rem 2rem;
     border-radius: .5rem;
     color: white;
-    
-  
 }
 
 .view-button span {
@@ -208,16 +238,10 @@ h1 {
     cursor: pointer;
 }
 
-
-/* Styling the grid view  */
-
-
-.grid-button {
+.grid-button { /* adding the grid view  */
     background-color: var(--Secondary-Color);
     color: black;
 }
-
-
 
 .grid-view {
     display: grid;
@@ -249,11 +273,7 @@ h1 {
     transform: scale(1.03);
 }
 
-
-/* Stlying the list view  */
-
-
-.list-button {
+.list-button { /* Addding the  list view  */
     background-color: var(--Secondary-Color);
     color: black;
 }
@@ -263,7 +283,6 @@ h1 {
     flex-direction: column;
     
 }
-
 
 .list-view article {
     height: 25rem;
@@ -287,9 +306,7 @@ h1 {
     font-size: 2rem;
 }
 
-/* stlying the card button  */
-
-.card-button {
+.card-button { /* stlying the card button  */
     background-color: var(--Secondary-Color-Var);
     font-size: 1.2rem;
     padding: 1.2rem;
@@ -298,92 +315,237 @@ h1 {
     color: black;
     transition: transform 0.2s;
 }
-
 .card-button:hover {
     transform: scale(1.07);
 }
 
+/* Styling the home page  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Styling the footer  */
-
-
-footer {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    text-align: left;
-    padding: 0 0 2rem 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
-    
+.hero {
+    height: 50rem;
+    background-image: url(../images/possibleHeroImages/hero5.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 3rem;
+    position: relative;
 }
 
-@media (min-width: 764px) { 
-    footer {
-        flex-direction: row;
-        gap: 0;
-        padding: 0;
-        justify-content: space-evenly;
-        align-items: center;
-        
+.content-hero {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.501);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    gap: 3rem;
+}
+
+.join-button {
+    background-color: var(--Secondary-Color-Var);
+    font-size: 2rem;
+    font-weight: bold;    
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.join-button:hover {
+    background-color: var(--Primary-Color);
+    color: white;
+}
+
+
+.hero-phrase {
+    text-transform:capitalize;
+    font-size: 3rem;
+    line-height: 5.5rem;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* El texto comienza fuera de la vista, desde arriba */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* El texto termina en su posición original */
     }
 }
 
-
-
-footer img {
-    width: 5rem;
+.fade-animation {
+    opacity: 0;
+    animation: fadeInDown 2.5s ease forwards;
 }
 
-.social-media-links {
+.title {
+    font-size: 4rem;
+    border-bottom: 3px solid var(--Secondary-Color);
+    margin-bottom: 5rem;
+}
+
+.upcoming-events {
+    text-align: left;
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 2.5rem 3rem;
+
+}
+
+
+
+.home {
+    margin-bottom: 5rem;
+}
+
+
+
+.home-card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 14%);
+    border-radius: .5rem;
+    margin-bottom: 2.5rem;
+}
+ 
+
+.home-card h3 {
+    background-color: var(--Primary-Color);
+    color: white;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    padding: 1rem;
+    margin: 0;
+}
+
+.weather-display {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(130px, 1fr)
+    );
     align-items: center;
-    gap: 2.3rem;
-   
+    justify-items: center;
+   padding: 1rem;
+}
+
+#weather-info {
+    justify-self: left;
     
 }
 
-.social-media-links a {
-    transition: transform 0.3s ease;
-}
+/* #weather-icon {
+    width: 15rem;
 
-.social-media-links a:hover {
-    transform: scale(1.2);
-}
+} */
 
-.student-info p {
-    margin: 0 0 .4rem 0;
+#weather-info p {
+    line-height: .8;
+    text-align: left;
     
 }
+
+#weather-info p:nth-of-type(2) {
+    text-transform: capitalize;
+}
+
+#forecast-weather-info {
+    list-style-type: none;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+    font-size: 2rem;
+}
+
+#advertising {
+    margin-bottom: 10rem;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(320px, 1fr)
+    );
+
+    gap: 2rem;
+}
+
+.advertising-info {
+    padding: 2rem;
+}
+
+.home-card.ads {
+    border-radius: 2rem;
+    transition: transform 0.2s;
+}
+
+.home-card.ads:hover {
+    transform: scale(1.03);
+}
+
+.home-card.ads h3{
+    background-color: unset;
+    color: black;
+}
+
+.advertising-card-title {
+    border-bottom: 2px solid rgb(242 233 233);
+    line-height: 1;
+    padding: 2rem;
+}
+.advertising-card-title h3 {
+    font-size: 3rem;
+}
+
+.advertising-card-title p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.advertising-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,8 +3,10 @@
         "name": "La Prensa",
         "address":"Km. 4 1/2 Carretera Norte, Managua, Nicaragua",
         "phoneNumber": "(506) 6445 2659",
+        "email": "laprensa@info.com",
         "websiteUrl":"https://www.laprensani.com/",
         "image": "images/laprensaLogo.webp",
+        "tagline": "Contamos la mejor historia",
         "membershipLvl": 1
     },
 
@@ -12,17 +14,21 @@
         "name": "Compañia Cervecera de Nicaragua",
         "address":"De Cruz Lorena Carretera norte 600 metros al lago, 11021",
         "phoneNumber": "(505) 2255 7700",
+        "email": "cervesanica@info.com",
         "websiteUrl":"https://www.ccn.com.ni/",
         "image": "images/cervesalogo.png",
-        "membershipLvl": 3
+        "tagline": "Como mi Toña, ninguna",
+        "membershipLvl": 1
     },
 
     {
         "name": "La Colonia",
         "address":"4PM8+HP2, Managua 12084",
         "phoneNumber": "(505) 8845 1111",
+        "email": "lacolonia@info.com",
         "websiteUrl":"https://www.lacolonia.com.ni/",
         "image": "https://s3.amazonaws.com/online.storage/LACOLONIA/Resources/7f781290-0741-46f7-a090-0ac4d563f424.png",
+        "tagline": "El super de Nicaragua",
         "membershipLvl": 2
     },
 
@@ -30,8 +36,10 @@
         "name": "Iniser",
         "address":"Km 4,5 carretera sur. Managua, Nicaragua",
         "phoneNumber": "(505) 2255-7575 ",
+        "email": "iniser@info.com",
         "websiteUrl":"https://www.iniser.com.ni/",
         "image": "images/iniserLogo.webp",
+        "tagline": "Asegurate y despreocupate",
         "membershipLvl": 3
     },
 
@@ -39,8 +47,10 @@
         "name": "Sinsa",
         "address":"Pista Benjamin Zeledon Rotonda Plaza España 200 mts. abajo, 12066",
         "phoneNumber": "(505) 2264 7000",
+        "email": "sinsa@info.com",
         "websiteUrl":"https://www.sinsa.com.ni/",
         "image": "images/sinsaLogo.webp",
+        "tagline": "Todo lo que necesitas, encuentralo en Sinsa",
         "membershipLvl": 3
     },
 
@@ -48,17 +58,21 @@
         "name": "Don Pan",
         "address":"4PFQ+2RM, Managua",
         "phoneNumber": "(505) 2278 2247",
+        "email": "donpan@info.com",
         "websiteUrl":"https://donpan.com.ni/",
         "image": "images/donPanLogo.png",
-        "membershipLvl": 1
+        "tagline": "Calentito y sabrocito",
+        "membershipLvl": 3
     },
 
     {
         "name": "Grupo Casa Pellas",
         "address":"De la rotonda el Güegüense 350 mts. al sur, Managua, Nicaragua",
         "phoneNumber": "(505) 2255 4444",
+        "email": "pellas@info.com",
         "websiteUrl":"https://casapellas.com/",
         "image": "images/casaPellasLogo.webp",
+        "tagline": "Suficiente Garantia",
         "membershipLvl": 3
     }
 
