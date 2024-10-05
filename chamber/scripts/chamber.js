@@ -183,6 +183,7 @@ function populatingCurrentWeather (data){
     weatherIcon.setAttribute('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`);
     weatherIcon.setAttribute('alt', 'The curretn weather icon');
     weatherIcon.setAttribute('width', 150);
+    weatherIcon.setAttribute('height', 150);
 
     const sunriseTimestamp = data.sys.sunrise; 
     const sunsetTimestamp = data.sys.sunset;
