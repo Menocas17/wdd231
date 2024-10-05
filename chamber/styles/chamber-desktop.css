@@ -91,6 +91,10 @@
         width: 50%;
         margin: 4rem auto;
     }
+
+    .weather-display img {
+        grid-row: 1 / 2;
+    }
 }
 
     
@@ -113,5 +117,9 @@
     #weather-info {
         justify-self: left;
         
+    }
+
+    .weather-display img {
+        grid-column: 2/3;
     }
 }

@@ -433,8 +433,8 @@ footer img {
     );
     align-items: center;
     justify-items: center;
-   padding: 1rem;
-   direction: rtl;
+    padding: 1rem;
+    direction: rtl;
 }
 
 .weather-display > * {
