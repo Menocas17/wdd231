@@ -550,17 +550,18 @@ footer img {
     height: 34.3rem;
     transition: transform 0.3s ease;
     opacity: 0; 
-    transform: translateY(-50px); 
-    animation: cascade 1.5s ease forwards; 
+    animation: cascade 2.5s ease forwards; 
+}
+
+.membership-card:hover {
+    transform:scale(1.05);
 }
 
 @keyframes cascade {
     to {
       opacity: 1; 
-      transform: translateY(0); 
     }
-  }
-
+  } 
 
 .gold {
     box-shadow: 0 0 10px rgba(190, 196, 11, 0.635);
@@ -581,9 +582,7 @@ footer img {
     animation-delay: 0.8s;
 }
 
-.membership-card:hover {
-    transform: scale(1.05);
-}
+
 
 @media (min-width: 600px) { 
     .membership-card {
