@@ -698,53 +698,55 @@ dialog ul {
     padding: 1rem;
     border-radius: 1rem;
     border: 2px solid var(--Secondary-Color-Var);
-    /* color: white;
-    background-color: var(--Primary-Color-Var); */
-   
+    /* color: white; */
+    /* background-color: var(--Primary-Color-Var); */
+}
 
-    label {
-        display: block;
-        text-align: left;
-        padding-left: 3rem;
-        margin-bottom: 2rem;
-    }
+.membership-form label {
+    display: block;
+    text-align: left;
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+}
 
-    h3 {
+.membership-form h3 {
     font-size: 2.5rem;
     text-align: left;
     padding-left: 3rem;
     /* color: var(--Secondary-Color); */
-    
-    }
+}
 
-    input[type=text],
-    input[type=tel],
-    input[type=date],
-    input[type=email],
-    select {
-        display: block;
-        width: 80%;
-        height: 3rem;
-        border-radius: .5rem;
-        border: 1px solid #999;
-        border-left-width: 4px;
-        padding: .4rem;
-        margin-top: .3rem;
-    }
+.membership-form input[type=text],
+.membership-form input[type=tel],
+.membership-form input[type=date],
+.membership-form input[type=email],
+.membership-form select {
+    display: block;
+    width: 80%;
+    height: 3rem;
+    border-radius: .5rem;
+    border: 1px solid #999;
+    border-left-width: 4px;
+    padding: .4rem;
+    margin-top: .3rem;
+}
 
-    textarea {
-        display: block;
-        border-radius: .5rem;
-        border: 1px solid #999;
-        padding: .4rem;
-        margin-top: .3rem;
-    }
+.membership-form textarea {
+    display: block;
+    border-radius: .5rem;
+    border: 1px solid #999;
+    padding: .4rem;
+    margin-top: .3rem;
+}
 
-    input:required, select {border-left-color: var(--Secondary-Color-Var)}
-    input:focus {border-left-color: black; outline:none;}
-    /* input:required:valid{border-left-color: green;} */
+.membership-form input:required,
+.membership-form select {
+    border-left-color: var(--Secondary-Color-Var);
+}
 
-
+.membership-form input:focus {
+    border-left-color: black; 
+    outline: none;
 }
 
 .membership-summary {
