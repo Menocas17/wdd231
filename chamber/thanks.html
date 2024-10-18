@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is the directory of companies associated with Managua Chamber of Commerce, here you will find all the information related with the local bussines and companies.">
+    <meta name="description" content="This is the thank you for join page of the Managua Chamber of Commerce, you will find a summary of the info you submittd in the the join page.">
     <meta name="author" content="Rodolfo Menocal">
-    <meta property="og:title" content="Directory | Managua Chamber of Commerce">        
+    <meta property="og:title" content="Join - Thank You - Page | Managua Chamber of Commerce">        
     <meta property="og:type" content="website">
-    <meta property="og:description" content="This is the directory of companies associated with Managua Chamber of Commerce, here you will find all the information related with the local bussines and companies.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/Menocas17/wdd231/refs/heads/main/chamber/managua-brands.webp">
-    <meta property="og:url" content="https://menocas17.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="This is the thank you for join page of the Managua Chamber of Commerce, you will find a summary of the info you submittd in the the join page.">
+    <meta property="og:image" content="https://menocas17.github.io/wdd231/chamber/images/join-page.webp">
+    <meta property="og:url" content="https://menocas17.github.io/wdd231/chamber/join.html">
     <meta name="twitter:card" content="summary_large_image">
-    <title>Directory | Managua Chamber of Commercer</title>
+    <title>Join - Thank You - Page | Managua Chamber of Commercer</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber.css">
@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
     <script src="scripts/chamber.js" defer></script>
 </head>
-<body id="directory-page">
+<body id="thanks-page">
     <header class="header">
         <a href="index.html" class="logo-name">
             
@@ -36,9 +36,9 @@
 
         <nav class="open-menu">
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
                 <li><a href="#">Discover</a></li>
             </ul>
         </nav>
@@ -46,27 +46,30 @@
         <button id="menu" aria-label="Menu button"></button>
 
     </header>
+
     
+   
+    <main class="container join-container">
+        
+        <h2 class="title">Congratulations!</h2>
+        <div class="thanks-message">
+            <p><strong id="current-date"></strong></p>
+            <p>Thank You for Your Submission!</p>
+            <p>We appreciate your interest in becoming a member of the Chamber of Commerce.</p>
+            <p>Here’s a summary of the information you provided:</p>
+            <ul>
+                <li><strong>Name:</strong> <span id="user-name"></span></li>
+                <li><strong>Email:</strong> <span id="user-email"></span></li>
+                <li><strong>Phone Number:</strong> <span id="user-phone"></span></li>
+                <li><strong>Business Name:</strong> <span id="business-name"></span></li>
+                <li><strong>Membership Level:</strong> <span id="thnk-membership-lvl"></span></li>
+                
+            </ul>
+            <p>Our team will review your application and get back to you shortly.</p>
+            <p>Thank you for being part of our community!</p>
 
-    <main class="container">
-
-        <h2 class="directory-tittle">Directory of Companies and Local Business</h2>
-
-        <p class="directory-paragraph">Welcome to the official directory of the Chamber of Commerce of Managua, Nicaragua. As the economic hub of the nation, Managua thrives with a diverse range of businesses and services, each contributing to the city’s growth and development. This directory is designed to connect you with local companies, from small enterprises to established corporations, all committed to driving economic progress in Nicaragua. Whether you’re looking for industry leaders, service providers, or new business opportunities, our directory offers a comprehensive resource to support your business needs. Explore and engage with Managua’s vibrant commercial community today. </p>
-
-        <button id="gridButton" class="view-button grid-button">
-            <span>&#9783;</span>  Grid
-
-        </button>
-        <button id="listButton" class="view-button">
-             <span>&#9776;</span> List
-        </button>
-
-        <section id="cards-section"> 
-
-
-
-        </section>
+            <a href="index.html"  class="thanks-button"">Continue</a>
+        </div>
 
     </main>
 

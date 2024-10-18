@@ -1,0 +1,68 @@
+{
+    "membership_levels": [
+      {
+        "level": "Gold",
+        "cost": "$1,200",
+        "target": "Established businesses looking for maximum exposure and networking opportunities.",
+        "benefits": [
+          "Top-tier Sponsorship Opportunities: Priority access to sponsor chamber events and conferences.",
+          "Enhanced Visibility: Company logo on the homepage of the chamber's website and in all promotional materials.",
+          "Exclusive Networking Events: Invitation to VIP networking events with local and international business leaders.",
+          "Marketing Support: Featured in chamber newsletters, social media shoutouts, and monthly business spotlights.",
+          "Complimentary Event Tickets: Free access to all chamber-organized events (trade fairs, expos, workshops).",
+          "Business Consultation: One-on-one consultation services for business growth, financing, and international trade.",
+          "Customized Training: Complimentary access to specialized workshops and training sessions for staff.",
+          "Business Directory Listing: Priority listing with a company logo in the chamber’s annual business directory.",
+          "Lobbying Support: Priority in advocacy efforts with local and national government.",
+          "Discounts on Services: Up to 25% discount on chamber services such as certifications, market studies, and co-working spaces."
+        ]
+      },
+      {
+        "level": "Silver",
+        "cost": "$800",
+        "target": "Growing businesses that want good visibility and networking.",
+        "benefits": [
+          "Sponsorship Opportunities: Eligible to sponsor chamber events at a discounted rate.",
+          "Increased Visibility: Company logo displayed in the chamber’s directory and select promotional materials.",
+          "Networking Opportunities: Invitations to regular chamber networking events and business mixers.",
+          "Marketing Support: Feature in select chamber newsletters and social media channels.",
+          "Discounted Event Tickets: Up to 50% discount on chamber-organized events (conferences, expos, workshops).",
+          "Business Consultation: Access to one complimentary consultation per year on business growth strategies.",
+          "Training Sessions: Access to general business training workshops.",
+          "Business Directory Listing: Company name listed in the chamber’s business directory.",
+          "Lobbying Support: Participation in chamber-led advocacy efforts.",
+          "Discounts on Services: 15% discount on chamber services such as certifications and market research."
+        ]
+      },
+      {
+        "level": "Bronze",
+        "cost": "$400",
+        "target": "Small businesses or startups looking for essential support and networking.",
+        "benefits": [
+          "Basic Sponsorship Opportunities: Eligible for limited sponsorship at chamber events.",
+          "Visibility: Business name listed on the chamber’s website and directory.",
+          "Networking Events: Invitations to general chamber networking events.",
+          "Discounted Event Tickets: Up to 25% discount on chamber-organized events.",
+          "Training Access: Access to general training workshops at a discounted rate.",
+          "Business Directory Listing: Basic business listing in the chamber’s directory.",
+          "Lobbying Support: Participation in chamber’s general advocacy initiatives.",
+          "Discounts on Services: 10% discount on chamber services."
+        ]
+      },
+      {
+        "level": "Non-Profit",
+        "cost": "$0.00",
+        "target": "Non-profit organizations looking for networking and advocacy support.",
+        "benefits": [
+          "Visibility: Non-profit listing on the chamber’s website and in the directory.",
+          "Networking Opportunities: Invitations to special events designed for non-profit organizations.",
+          "Marketing Support: Inclusion in chamber newsletters and social media spotlights focused on community impact.",
+          "Discounted Event Tickets: Up to 75% discount on chamber events.",
+          "Collaborative Opportunities: Access to partnerships with local businesses for community projects.",
+          "Advocacy Support: Special focus on advocacy for non-profit causes.",
+          "Training Sessions: Discounted rates for non-profit leadership training workshops.",
+          "Business Directory Listing: Free listing in the non-profit section of the chamber’s directory."
+        ]
+      }
+    ]
+  }

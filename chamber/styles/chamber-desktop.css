@@ -95,7 +95,132 @@
     .weather-display img {
         grid-row: 1 / 2;
     }
+
+    /* sytling teh join page  */
+
+    .membership-display {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       grid-template-rows: auto;
+       justify-items: center;
+       grid-template-areas: 
+       "bronze gold silver"
+       "non-profit non-profit non-profit";    
+    }
+
+    .gold {
+        grid-area: gold;
+    }
+
+    .silver {
+        grid-area: silver;
+    }
+
+    .bronze {
+        grid-area: bronze;
+    }
+
+    .non-profit {
+        grid-area: non-profit;
+    }
+
+    .membership-card {
+        height: 36rem;
+    }
+
+    .gold {
+        margin-bottom: 10rem;
+    }
+
+    .non-profit {
+        display: flex;
+        height: 18rem;
+        gap: 5rem;
+        padding: 1.5rem 1.5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title-join{
+        font-size: 4rem;
+    }
+
+    .title-join:first-of-type {
+        margin-top: 8rem;
+        margin-bottom: 6rem;
+    }
+
+    .title-profit {
+        width: 80%;
+        margin-bottom: 7rem;
+    }
+
+    .non-profit button {
+        margin-top: 0;
+    }
+
+    .title-form {
+        font-size: 4rem;
+        margin-bottom: 7rem;
+    }
+
+    .membership-form {
+        width: 50rem;
+        margin: 0 auto;
+    }
+
+    .membership-form {
+        margin-bottom: 5rem;
+
+        margin-top: .3rem;
+
+        textarea {
+            display: block;
+            border-radius: .5rem;
+            border: 1px solid #999;
+            padding: .4rem;
+            width: 81%;
+        }
+    }
+
+    .membership-form input[type=submit] {
+        width: 18rem;
+        font-size: 1.8rem;
+        padding: 1.5rem;
+       
+    }    
+
+    .thanks-button {
+        font-size: 1.8rem;
+    }
 }
+
+@media (min-width: 965px) { 
+    
+    .membership-summary {
+        display: block;
+    }
+
+    .gold.summary-card {
+        margin-bottom: 2.5rem;
+    }
+
+    .summary-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+        padding: 1.5rem 1.5rem;
+        height: 16rem;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+    }
+}
+   
 
     
 @media (min-width: 1080px) { 

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the join page of the Managua Chamber of Commerce, in this page the user will be able to subscribe to one of the membership levels and become part of the chamber of commerce.">
+    <meta name="author" content="Rodolfo Menocal">
+    <meta property="og:title" content="Join Page | Managua Chamber of Commerce">        
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="This is the join page of the Managua Chamber of Commerce, in this page the user will be able to subscribe to one of the membership levels and become part of the chamber of commerce.">
+    <meta property="og:image" content="https://menocas17.github.io/wdd231/chamber/images/join-page.webp">
+    <meta property="og:url" content="https://menocas17.github.io/wdd231/chamber/join.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Join Page | Managua Chamber of Commercer</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/chamber-desktop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <script src="scripts/chamber.js" defer></script>
+</head>
+<body id="join-page">
+    <header class="header">
+        <a href="index.html" class="logo-name">
+            
+            <img src="images/chamber-logo.webp" alt="Logo of Managua Chamber of Commerce" width="100">
+
+            <div class="main-title">
+                <h1>Managua</h1>
+                <p>Chamber of Commerce</p>
+                
+            </div>
+        </a>
+
+        <nav class="open-menu">
+            <ul class="nav-menu">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+
+        <button id="menu" aria-label="Menu button"></button>
+
+    </header>
+
+    
+   
+    <main class="container join-container">
+        
+
+        <section class="membership">
+            
+            <h2 class="title title-join">Membership Levels</h2>
+
+            <div class="membership-display">
+                <article class="membership-card gold">
+                    <img src="images/medalla-de-oro.webp" alt="Image of a gold medal" loading="lazy" width="100px" height="100px">
+                    <h3>Gold Membership</h3>
+                    <p>Premium Benefits</p>
+                    <button id="gold-button">Learn More</button>
+                </article>
+                <article class="membership-card silver">
+                    <img src="images/medalla-de-plata.webp" alt="Image of a silver medal" loading="lazy" width="100px" height="100px">
+                    <h3>Silver Membership</h3>
+                    <p>Standard Business Benefits</p>
+                    <button id="silver-button">Learn More</button>
+                </article>
+                <article class="membership-card bronze"> 
+                    <img src="images/medalla-de-bronce.webp" alt="Image of a bronze medal" loading="lazy" width="100px" height="100px">
+                    <h3>Bronze Membership</h3>
+                    <p>Essential Business Benefits</p>
+                    <button id="bronze-button">Learn More</button>
+                </article>
+            </div>
+
+
+            <h2 class="title title-join title-profit">Business or Non-Profit, You’re Welcome Here! </h2>
+
+            <div class="other-membership">
+                
+                <article class="membership-card non-profit">
+                    <img src="images/caridad.webp" alt="Image of to hands and a happy face simbolizing non-profit or charity" loading="lazy" width="100px" height="100px">
+                    <div>
+                        <h3>Non-Profit Membership</h3>
+                        <button id="non-profit-button">Learn More</button>
+                    </div>
+                    
+                </article>
+            </div>
+        </section>
+
+        <dialog id="membership-info-modal"></dialog>
+
+        <section class="form-section">
+            <h2 class="title title-form">Membership Aplication Form</h2>
+
+            <div class="form-grid">
+                <form method="GET" action="thanks.html" class="membership-form">
+                    <h3>Personal Information</h3>
+                    <label>First Name <input type="text" name="first" required title="Enter your first name" autocomplete="given-name"></label>
+                    <label>Last Name <input type="text" required name="last" title="Enter you last name" autocomplete="family-name"></label>
+                    <label>Organizational Title <input type="text" name="OrgTitle" title="Enter your currenter title within your organization" autocomplete="organization-title" pattern="^[a-zA-Z\s-]{7,}$">
+                    </label>
+                    <label>Email Address <input type="email" required name="email" title="Enter you email address" autocomplete="email" placeholder="membership@example.com"></label>
+                    <label>Phone Number <input type="tel" required name="tel" autocomplete="tel"></label>
+    
+                    <h3>Organization Information</h3>
+    
+                    <label>Bussines/Organization Name <input type="text" required name="bussinesName" title="The name of your company or organization" autocomplete="organization"></label>
+                    <label>Bussines/Organization Description<textarea name="orgDescription"  cols="35" rows="5" title="Enter the general description of your organization"></textarea></label>
+                    
+                    <h3>Membership Level</h3>
+    
+                    <label>Choose your Membership Level
+                        <select name="membershipLvl" required>
+                            <option value="">Select an option</option>
+                            <option value="Gold">Gold Subscription</option>
+                            <option value="Silver">Silver Subscription</option>
+                            <option value="Bronze">Bronze Subscription</option>
+                            <option value="Non-Profit">Non-Profit Subscription</option>
+                        </select>
+                    </label>
+    
+                    <input type="hidden" name="timeStamp" id="timeStamp">
+                    <input type="submit" value="Subscribe">
+    
+                </form>
+    
+                <div class="membership-summary">
+                    <article class="membership-card gold summary-card">
+                        <img src="images/medalla-de-oro.webp" alt="Image of a gold medal" loading="lazy" width="100px" height="100px">
+                        <h3>Gold Membership</h3>
+                    </article>
+                    <article class="membership-card silver summary-card">
+                        <img src="images/medalla-de-plata.webp" alt="Image of a silver medal" loading="lazy" width="100px" height="100px">
+                        <h3>Silver Membership</h3>
+                    </article>
+                    <article class="membership-card bronze summary-card"> 
+                        <img src="images/medalla-de-bronce.webp" alt="Image of a bronze medal" loading="lazy" width="100px" height="100px">
+                        <h3>Bronze Membership</h3>
+                    </article>
+    
+                    <article class="membership-card non-profit summary-card">
+                        <img src="images/caridad.webp" alt="Image of to hands and a happy face simbolizing non-profit or charity" loading="lazy" width="100px" height="100px">
+                        <h3>Non-Profit Membership</h3>
+                    </article>
+                </div>
+            </div>
+
+
+
+        </section>
+        
+    
+    </main>
+
+    <footer>
+        <div class="name-and-address">
+            <h2>Managua Chamber of Commerce</h2>
+            <p>
+                Plaza 7 Sur 247 <br>
+                Managua, Nicaragua 12389 <br>
+                info@managuacc.org <br>
+                📞 +505 3452-3463
+            </p>
+        </div>
+        <div class="social-media-links">
+            <a href="#"><img src="images/facebook-logo.webp" alt="Facebook logo and link to the social media" loading="lazy" width="100" height="60"></a>
+            <a href="#"> <img src="images/instragram-logo.webp" alt="Instagram logo and link to the social media" loading="lazy" width="100" height="60"></a>
+            <a href="#"><img src="images/x-logo.webp" alt="Twitter logo and link to the social media" loading="lazy" width="100" height="60"></a>
+        </div>
+        <div class="student-info">
+            <p><strong>WDD 231 Class Project</strong></p>
+            <p> 🇳🇮 Rodolfo Menocal 🇳🇮</p>
+            <p>©<span id="currentyear"></span> Managua Chamber of Commerce</p>
+            <p> <strong>Last Modification: </strong><span id="lastModified"></span></p>
+        </div>
+    </footer>
+    
+</body>
+</html>

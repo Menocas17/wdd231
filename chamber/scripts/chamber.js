@@ -248,7 +248,100 @@ const randomAdvertising = async () => {
    
 }
 
-randomAdvertising();
+// Join Page Scripts 
+
+
+const goldButton = document.querySelector('#gold-button');
+const silverButton = document.querySelector('#silver-button');
+const bronzeButton = document.querySelector('#bronze-button');
+const nonProfitButton = document.querySelector('#non-profit-button');
+const membershipUrl = './data/membershipLvls.json' // fetching the members data from the Json file
+const membershipInfo = document.querySelector('#membership-info-modal')
+const goldSumCard = document.querySelector('.gold.summary-card');
+const silverSumCard = document.querySelector('.silver.summary-card');
+const bronzeSumCard = document.querySelector('.bronze.summary-card');
+const nonProfitSumCard = document.querySelector('.non-profit.summary-card');
+
+
+const getMembershipInfo = async () => {
+    try {
+        const response = await fetch(membershipUrl);
+        if(!response.ok) {
+            throw new Error (`Response status: ${response.status}`)
+        }
+
+        const data = await response.json();
+        return data.membership_levels;
+    }
+
+    catch (error) {
+        console.error(error.message)
+    }
+}
+
+
+const populateMembershipInfo = (membership) => {
+    const benefitsList = membership.benefits.map(benefit => `<li>${benefit}</li>`).join('');
+    membershipInfo.innerHTML = '';
+    membershipInfo.innerHTML = `
+        <button id="closeModal">X</button>
+        <h3>${membership.level}</h3>
+        <div>
+            <h4 class="membership-cost">${membership.cost}<span>/year</span></h4>
+            <p>${membership.target}</p>
+            <h4 class="title title-benefits">Know your Benefits!</h4>
+            <ul>${benefitsList}</ul>    
+        </div>
+        
+    `;
+
+    membershipInfo.showModal();
+
+    document.querySelector('#closeModal').addEventListener('click', () => {
+        membershipInfo.close();
+    });
+
+}
+
+
+
+const displayMembershipInfo = async () => {
+    const membershipInfo = await getMembershipInfo()
+
+    goldButton.addEventListener('click', () => {
+        populateMembershipInfo (membershipInfo[0]);
+    })
+
+    silverButton.addEventListener('click', () => {
+        populateMembershipInfo (membershipInfo[1]);
+    })
+
+    bronzeButton.addEventListener('click', () => {
+        populateMembershipInfo (membershipInfo[2]);
+    })
+
+    nonProfitButton.addEventListener('click', () => {
+        populateMembershipInfo(membershipInfo[3])
+    })
+
+    goldSumCard.addEventListener('click', () => {
+        populateMembershipInfo (membershipInfo[0]);
+    })
+
+    silverSumCard.addEventListener('click', () => {
+        populateMembershipInfo (membershipInfo[1]);
+    })
+
+    bronzeSumCard.addEventListener('click', () => {
+        populateMembershipInfo (membershipInfo[2]);
+    });
+
+    nonProfitSumCard.addEventListener('click', () => {
+        populateMembershipInfo(membershipInfo[3])
+    })
+}
+
+
 
 //Adding the addEventListener and conditinals to manage the scripts acroos the diferent pages
 
@@ -300,6 +393,67 @@ document.addEventListener('DOMContentLoaded', ()=> {
         
         displayCurrentWeather();
         populatingForecastWeather();
+        randomAdvertising();
+
+    }
+
+    if(document.body.id === 'join-page') {
+        displayMembershipInfo();
+
+        timestamp = document.querySelector('#timeStamp');
+        timestamp.value = new Date ().toISOString();
+
+    }
+
+    if(document.body.id === 'thanks-page') {
+
+
+
+        const currentUrl = window.location.href;
+        const splitUrl = currentUrl.split('?');
+
+        let formData = splitUrl[1].split ('&');
+        console.log(formData)
+        
+        function show (data) {
+            let result;
+            formData.forEach((element) => {
+
+                
+
+                if(element.startsWith(data)) {
+                    result = decodeURIComponent(element.split('=')[1])
+
+                    if(data === 'timeStamp') {
+                        localDate = new Date(result).toLocaleString([], {
+                            year: 'numeric', 
+                            month: '2-digit', 
+                            day: '2-digit', 
+                            hour: '2-digit', 
+                            minute: '2-digit'
+                        })
+    
+                        result = localDate;
+                    }
+                }
+            })
+
+            return(result);
+        }
+
+        document.querySelector('#user-name').textContent = `${show('first')} ${show('last')}`;
+
+        document.querySelector('#user-email').textContent = `${show('email')}`;
+
+        document.querySelector('#thnk-membership-lvl').textContent = `${show('membershipLvl')}`;
+
+        document.querySelector('#user-phone').textContent = `${show('tel')}`;
+
+        document.querySelector('#business-name').textContent = `${show('bussinesName')}`;
+
+        document.querySelector('#current-date').textContent = `${show('timeStamp')}`
+   
+
     }
 
     
