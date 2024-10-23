@@ -787,6 +787,12 @@ dialog ul {
     list-style-type: none;
 }
 
+/* Styling the discover page  */
+
+.container.discover {
+    text-align: left;
+}
+
 
 
 

@@ -191,6 +191,16 @@
     .thanks-button {
         font-size: 1.8rem;
     }
+
+    /* Styling the discover page  */
+
+    .discover-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        gap: 5rem;
+    }
+
+   
 }
 
 @media (min-width: 965px) { 
@@ -217,6 +227,20 @@
         grid-template-columns: 1fr 1fr;
         gap: 5rem;
     }
+
+    .discover-images img {
+        width: 38rem;
+        height: 24rem;
+    }
+
+    .discover-info {
+        position: sticky; /* Enable sticky positioning */
+        top: 13rem; /* Stick to the top of the viewport */
+        height: 100vh; 
+        overflow-y: auto; 
+        padding: 2rem
+ 
+    }
 }
    
 
@@ -234,6 +258,11 @@
         justify-items: center;
         align-items: center;
     } 
+
+    .discover-images img {
+        width: 45rem;
+        height: 30rem;
+    }
 }
 
 @media (min-width: 1289px) { 

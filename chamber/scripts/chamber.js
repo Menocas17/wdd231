@@ -341,6 +341,85 @@ const displayMembershipInfo = async () => {
     })
 }
 
+// Adding the scripts for the discover page 
+
+// const displayWelcomeMessage = () => {
+
+//     const welcomeArticle = document.querySelector('#welcome-phrase');
+
+//     localStorage.setItem('lastVisit', '1729547623000')
+//     let pageLoaded;
+
+//     if (document.readyState === 'loading') {
+//         document.addEventListener('DOMContentLoaded', () => {
+//             pageLoaded = Date.now(); 
+            
+//         });
+//     } else {
+//         pageLoaded = Date.now();
+    
+//     }
+
+//     if(!localStorage.getItem('firstVisit')) {
+//         welcomeArticle.innerHTML = `
+//             <h3>Welcome! Let us know if you have any questions!.</h3>
+//         `
+//         localStorage.setItem('firstVisit', 'true');
+//     }
+//     else {
+//         const lastVisit = parseInt(localStorage.getItem('lastVisit'))
+//         if((pageLoaded - lastVisit) / 86400000 <= 1) {
+//             welcomeArticle.innerHTML = `
+//             <h3>Back so soon! Awesome!</h3>
+//         `
+//         }
+//     }
+ 
+// }
+
+const displayWelcomeMessage = () => {
+    const welcomeArticle = document.querySelector('#welcome-phrase');
+    let pageLoaded = Date.now();
+
+
+
+    const updateWelcomeMessage = () => {
+        if (!localStorage.getItem('firstVisit')) {
+            welcomeArticle.innerHTML = `
+                <h3>Welcome! Let us know if you have any questions!</h3>
+            `;
+            localStorage.setItem('firstVisit', 'true');
+
+           
+            localStorage.setItem('lastVisit', pageLoaded.toString());
+        } else {
+            const lastVisit = parseInt(localStorage.getItem('lastVisit'), 10);
+
+         
+            if (!isNaN(lastVisit) && (pageLoaded - lastVisit) / 86400000 <= 1) {
+                welcomeArticle.innerHTML = `
+                    <h3>Back so soon! Awesome!</h3>
+                `;
+            }
+
+            if (!isNaN(lastVisit) && (pageLoaded - lastVisit) / 86400000 >= 1) {
+                let numOfDays = Math.floor((pageLoaded - lastVisit) / 86400000)
+                welcomeArticle.innerHTML = `
+                    <h3>You last visit was ${numOfDays} days ago</h3>
+                `;
+            }
+
+           
+            localStorage.setItem('lastVisit', pageLoaded.toString());
+        }
+    };
+
+    updateWelcomeMessage();
+
+};
+
+
+
 
 
 //Adding the addEventListener and conditinals to manage the scripts acroos the diferent pages
@@ -454,6 +533,11 @@ document.addEventListener('DOMContentLoaded', ()=> {
         document.querySelector('#current-date').textContent = `${show('timeStamp')}`
    
 
+    }
+
+    if(document.body.id === 'discover-page') {
+        displayWelcomeMessage();
+        
     }
 
     
