@@ -194,10 +194,37 @@
 
     /* Styling the discover page  */
 
+    .discover-title {
+        font-size: 4rem;
+        margin-top: 6rem;
+    }
+
     .discover-grid {
         display: grid;
         grid-template-columns: 1fr 1fr ;
-        gap: 5rem;
+        gap: 2rem;
+    }
+
+ 
+    .demographics, .economic-overview {
+        margin-bottom: 2rem;
+    }
+
+    .discover-images {
+        padding: 2rem;
+    }
+
+    .discover-images h3 {
+        margin: 2.5rem 0;
+    }
+
+    .discover-images img {
+        transition: transform 0.3s;
+        
+    }
+
+    .discover-images img:hover {
+        transform: scale(1.03);
     }
 
    
@@ -234,13 +261,15 @@
     }
 
     .discover-info {
-        position: sticky; /* Enable sticky positioning */
-        top: 13rem; /* Stick to the top of the viewport */
+        position: sticky; 
+        top: 5rem; 
         height: 100vh; 
-        overflow-y: auto; 
+        overflow-y: hidden; 
         padding: 2rem
  
     }
+
+
 }
    
 
