@@ -9,9 +9,6 @@ export const exploreContent = async () => { // This function will display all th
 
     const categories = await fetchCategories();
 
-    console.log(categories)
-
-
     const preloadImage = (src) => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -19,6 +16,8 @@ export const exploreContent = async () => { // This function will display all th
         link.as = 'image';
         document.head.appendChild(link);
     };
+
+    preloadImage(categories[0].strCategoryThumb);
     
 
     categories.forEach(category => {
@@ -35,8 +34,6 @@ export const exploreContent = async () => { // This function will display all th
 
         fragment.appendChild(article);
     });
-
-    preloadImage(categories[0].strCategoryThumb);
 
     exploreSection.appendChild(fragment);
 }
