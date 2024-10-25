@@ -403,6 +403,7 @@ input::placeholder {
 #explore-content {
     display: flex;
     flex-direction: column;
+    min-height: 80rem;
     align-items: center;
     gap: 3rem;
     margin-bottom: 8rem;
