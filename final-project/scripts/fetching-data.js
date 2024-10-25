@@ -1,5 +1,7 @@
 
 
+const imgixBaseUrl = 'https://tastyeats.imgix.net';
+
 // Fetching all the different datas from the API 
 
 
@@ -13,10 +15,14 @@ export const fetchCategories = async () => {  // Fetching the categories list
         const categoriesData = await fetch('https://www.themealdb.com/api/json/v1/1/categories.php');
 
         if(!categoriesData.ok) {
-            throw new Error (`Response status: ${response.status}`)
+            throw new Error (`Response status: ${categoriesData.status}`)
         }
 
         const categories = await categoriesData.json();
+
+        categories.categories.forEach(img => {
+            img.strCategoryThumb = `${imgixBaseUrl}/category/${img.strCategoryThumb.split('/').pop()}?fm=webp`;
+        });
 
         console.log(categories.categories);
 
