@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover delicious and easy-to-follow meal recipes for every occasion. From quick weeknight dinners to gourmet dishes, explore a variety of flavors and cuisines to elevate your cooking. Perfect for home chefs of all levels!">
+    <meta name="description" content="Explore a wide variety of delicious meal recipes, from appetizers to desserts. Discover new flavors and cooking techniques to inspire your next culinary creation. Start exploring today!">
     <meta name="author" content="Rodolfo Menocal">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Discover delicious and easy-to-follow meal recipes for every occasion. From quick weeknight dinners to gourmet dishes, explore a variety of flavors and cuisines to elevate your cooking. Perfect for home chefs of all levels!">
-    <meta property="og:image" content="https://menocas17.github.io/wdd231/final-project/images/meta-img/home-img.webp">
-    <meta property="og:url" content="https://menocas17.github.io/wdd231/final-project/index.html">
+    <meta property="og:description" content="Explore a wide variety of delicious meal recipes, from appetizers to desserts. Discover new flavors and cooking techniques to inspire your next culinary creation. Start exploring today!">
+    <meta property="og:image" content="https://menocas17.github.io/wdd231/final-project/images/meta-img/explore-img.webp">
+    <meta property="og:url" content="https://menocas17.github.io/wdd231/final-project/explore.html">
     <meta name="twitter:card" content="summary_large_image">
-    <title> Home | Tasty Eats </title>
+    <title> Explore | Tasty Eats </title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/mobile-version.css">
@@ -18,9 +18,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="scripts/main-scripts.js" defer></script>
+    <!-- <script src="scripts/main-scripts.js" defer></script> -->
+    <script src="scripts/main-scripts.js" type="module" defer></script>
 </head>
-<body id="home-page">
+<body id="explore-page">
 
     <header class="box-shadow">
 
@@ -29,8 +30,8 @@
         <div>
             <nav class="menu"">
                 <ul class="ul-li-styled nav-menu"">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="#" class="active">Explore</a></li>
                     <li><a href="">My Recipies</a></li>
                     <li><a href="">Search</a></li>
                 </ul>
@@ -40,44 +41,17 @@
         <button id="ham-menu" aria-label="Menu button"></button>
     </header>
 
-    <section class="hero">
-        <div class="content-hero">
-            <h1>Taste the World, Enyou your Life</h1>
+    <main class="container">
 
-            <a href="#" class="button button-link">Explore</a> 
+        <div class="explore-menu">
+            <h1 id="explore-title">Categories</h1>
+            <button class="button btn-explore">Back</button>
         </div>
-    </section>
-   
 
-    <main class="main-bg">
+        <section id="explore-content">
 
-        <div class="container content-home">
-            <h2>Create your own recipies!</h2>
-
-            <section class="recipies-home section-home">
-                <img src="images/tasty-hero/recipies-home.webp" alt="A person cooking" width="500" height="300" loading="lazy">
-
-                <div>
-                    <p>Unleash your creativity by crafting and adding unique recipes! Whether it's your favorite dish or a new experiment, you can save your recipes directly on the site. Start building your culinary collection today!</p>
-                    <a href="" class="button button-link">Try it!</a>
-                </div>
-            </section>
-
-            <h2>Looking for an specific recipe? 🔍</h2>
-
-            <section class="search-home section-home">
-                <img src="images/tasty-hero/search-home.webp" alt="A person recipies on internet" width="500" height="300" loading="lazy">
-
-                <div>
-                    <p>Looking for inspiration? Use our search tool to find delicious recipes quickly and easily. Whether you're craving something sweet, savory, or a new twist on a classic dish, simply enter your keywords, and discover a world of culinary possibilities at your fingertips!</p>
-                    <a href="" class="button button-link">Search</a>
-                </div>
-
-            </section>
-
-
-        </div>
-        
+        </section>
+  
     </main>
 
     <footer class="box-shadow">
