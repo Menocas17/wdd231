@@ -1,0 +1,142 @@
+@media (min-width: 764px) { 
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3.5rem;
+    }
+    h3 {
+        font-size: 2.8rem;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    .button {
+        width: 15rem;
+        height: 4rem;
+        border: none;
+        border-radius: 1rem;
+        background-color: var(--Green);
+        color: var(--black);
+    }
+
+
+    
+    
+    .button-link {
+        height: auto;
+        font-family: var(--Poppins);
+        padding: 1.2rem 1rem;
+        text-decoration: none;
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+
+    /* Styling the header and nav menu  */
+    #ham-menu {
+        display: none;
+    }
+
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1rem 0;
+    }
+    
+    .menu {
+        grid-template-rows: 1fr;
+        height: auto;
+        transition: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 7rem;
+    }
+
+    .nav-menu a {
+        font-size: 2.5rem;
+    }
+
+    .nav-menu a::after {
+        bottom: -0.5rem;
+        height: 0.7rem;
+    }
+
+    .logo {
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .menu-footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* stylilng the footer  */
+
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    /* Styling the home page  */
+
+
+    .hero {
+        height: 55rem;
+    }
+
+    .content-hero {
+        justify-content: center;
+    }
+
+    .content-hero h1 {
+       font-size: 4rem;
+       margin-top: 18rem;
+       
+    }
+
+
+
+    .content-home h2:first-of-type, .content-home h2:last-of-type {
+        margin-bottom:6rem;
+        margin-top: 5rem;
+        font-size: 4.8rem;
+    }
+
+    .content-home p {
+        margin-bottom: 4rem;
+    }
+
+    .content-home img {
+        width: 40rem;
+        height: 30rem;
+      
+    }
+
+    .section-home {
+        flex-direction: row;
+        gap: 8rem;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .search-home  {
+        flex-direction: row-reverse;
+    }
+}
+
+@media (min-width: 1200px) { 
+ 
+    .content-hero h1 {
+        margin-top: 12rem;
+        font-size: 5rem;
+    }
+}

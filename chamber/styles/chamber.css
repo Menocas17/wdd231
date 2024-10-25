@@ -371,11 +371,11 @@ footer img {
 @keyframes fadeInDown {
     0% {
         opacity: 0;
-        transform: translateY(-50px); /* El texto comienza fuera de la vista, desde arriba */
+        transform: translateY(-50px); 
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* El texto termina en su posición original */
+        transform: translateY(0); 
     }
 }
 
