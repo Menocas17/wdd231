@@ -17,7 +17,7 @@ export const exploreContent = async () => { // This function will display all th
         document.head.appendChild(link);
     };
 
-    // preloadImage(categories[0].strCategoryThumb);
+    preloadImage(categories[0].strCategoryThumb);
     
 
     categories.forEach(category => {
