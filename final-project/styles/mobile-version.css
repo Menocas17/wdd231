@@ -464,45 +464,32 @@ input::placeholder {
 }
 
 
-/* .loading-screen {
-    display: flex; 
-    z-index: 1000;
-    position: absolute;
-    left: -18rem;
-    top: 15rem;
-    width: 80rem;
-    height: 80rem;
-    justify-content: center; 
-    align-items: center; 
-} */
-
-
 .loading-screen {
     display: flex; 
-    z-index: 1000; /* Initially hidden */
-    position: fixed; /* Change to fixed for centering on the viewport */
-    left: 50%; /* Center horizontally */
-    top: 50%; /* Center vertically */
+    z-index: 1000;
+    position: fixed; 
+    left: 50%; 
+    top: 50%; 
     width: 100%;
     height: 100%;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    justify-content: center; 
+    align-items: center;
     transform: translate(-50%, -45%); 
 }
 
 /* Loader Styles */
 .loader {
-    text-align: center; /* Center text */
+    text-align: center; 
 }
 
 .spinner {
     width: 60px;
     height: 60px;
-    border: 8px solid #f3f3f3; /* Light gray background */
-    border-top: 8px solid #3498db; /* Blue color for the spinner */
-    border-radius: 50%; /* Make it circular */
-    animation: spin 1s linear infinite; /* Spin animation */
-    margin: 0 auto; /* Center the spinner */
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #3498db; 
+    border-radius: 50%; 
+    animation: spin 1s linear infinite; 
+    margin: 0 auto; 
 }
 
 /* Spin Animation */
@@ -513,8 +500,75 @@ input::placeholder {
 
 /* Loading Text Styles */
 .loading-screen h2 {
-    margin-top: 20px; /* Space between spinner and text */
-    color: #3498db; /* Text color matching the spinner */
-    font-family: var(--Pacifo); /* Choose your preferred font */
-    font-size: 24px; /* Adjust text size */
+    margin-top: 20px; 
+    color: #3498db; 
+    font-family: var(--Pacifo); 
+    font-size: 24px; 
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog {
+    border-radius: .6rem;
+    padding: 0rem;
+    width: 80rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 3rem #777;
+    background-color: var(--white);
+    text-align: center;
+
+}
+
+dialog h3 {
+    font-family: var(--Pacifo);
+    font-size: 3rem;
+
+    margin: 0;
+    padding: 2rem 9rem;
+    margin-bottom: 5rem;
+    
+}
+
+dialog h4 {
+    font-size: 2.5rem;
+    text-decoration: underline;
+    color: var(--Blue);
+    
+}
+
+dialog img {
+    width: 30rem;
+    margin: 0 auto;
+    border-radius: .5rem;
+}
+
+.instructions {
+    text-align: left;
+}
+
+.iframe {
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.btn-modal {
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.modal-container {
+    padding-bottom: 3rem;
+}
+
+#closeModal {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    background: var(--Blue);
+    border: none;
+    font-size: 4rem;
+    color: var(--white);
+    border-radius: 1rem;
 }

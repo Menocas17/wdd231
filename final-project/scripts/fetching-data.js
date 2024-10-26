@@ -24,8 +24,6 @@ export const fetchCategories = async () => {  // Fetching the categories list
             img.strCategoryThumb = `${imgixBaseUrl}/category/${img.strCategoryThumb.split('/').pop()}?fm=webp`;
         });
 
-        console.log(categories.categories);
-
         return (categories.categories)
 
     } catch (error) {
@@ -50,9 +48,6 @@ export const filterByCategory = async (category) => { // Fetching the meals by c
             img.strMealThumb = `${imgixBaseUrl}/media/meals/${img.strMealThumb.split('/').pop()}?fm=webp`;
         });
 
-
-        console.log(filteredCategory.meals)
-
         return filteredCategory.meals
 
     } catch (error) {
@@ -70,6 +65,9 @@ export const fetchingMeal = async (idMeal) => { // Fetching the meal details
         }
 
         const meal = await mealData.json()
+
+        meal.meals[0].strMealThumb = `${imgixBaseUrl}/media/meals/${meal.meals[0].strMealThumb.split('/').pop()}?fm=webp`;
+
         console.log(meal.meals[0])
         return meal.meals[0];
 

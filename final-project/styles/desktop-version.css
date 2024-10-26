@@ -161,15 +161,35 @@
     .min-height {
         min-height: 80rem;        
     }
+    dialog h3 {
+        text-align: center;
+        font-family: var(--Pacifo);
+        font-size: 4rem;
+        
+    
+    }
+    
+    dialog img {
+        width: 40rem;
+        margin: 0 auto;
+        border-radius: .5rem;
+    }
 
-    /* .loading-screen {
-        left: 55rem;
-        top: 20rem;
-    } */
+    .iframe {
+        width: 80%;
+    }
+    .instructions {
+        font-size: 1.6rem;
+    }
 
-    /* .loading-screen {
-        align-items: center
-    } */
+    #closeModal{
+        top: 3rem;
+    }
+
+    .btn-modal{
+        font-weight: normal;
+
+    }
 }
 
 @media (min-width: 1000px) { 
@@ -183,7 +203,7 @@
 
     .btn-explore {
         right: 9rem;
-    
+        
     }
 }
 
