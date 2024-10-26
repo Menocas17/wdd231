@@ -1,4 +1,5 @@
 import { exploreContent } from "./explore.js";
+import { myRecipiesContent } from "./myrecipies.js";
 
 
 // Scripts for handeling the ham button 
@@ -14,6 +15,10 @@ hamButton.addEventListener('click', () => {
 
 if (document.body.id === 'explore-page'){
     exploreContent();
+}
+
+if (document.body.id === 'myrecipies-page') {
+    myRecipiesContent();
 }
 
 

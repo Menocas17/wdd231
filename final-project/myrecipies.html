@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore a wide variety of delicious meal recipes, from appetizers to desserts. Discover new flavors and cooking techniques to inspire your next culinary creation. Start exploring today!">
+    <meta name="description" content="TastyEats is your go-to online recipes website offering delicious meal ideas for all tastes and dietary needs. Easily save your favorite recipes locally, organize them in one place, and get inspired to cook something new every day!">
     <meta name="author" content="Rodolfo Menocal">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Explore a wide variety of delicious meal recipes, from appetizers to desserts. Discover new flavors and cooking techniques to inspire your next culinary creation. Start exploring today!">
-    <meta property="og:image" content="https://menocas17.github.io/wdd231/final-project/images/meta-img/explore-img.webp">
+    <meta property="og:description" content="TastyEats is your go-to online recipes website offering delicious meal ideas for all tastes and dietary needs. Easily save your favorite recipes locally, organize them in one place, and get inspired to cook something new every day!">
+    <meta name="author" content="Rodolfo Menocal">
+    <meta property="og:image" content="https://menocas17.github.io/wdd231/final-project/images/meta-img/myrecipies.webp">
     <meta property="og:url" content="https://menocas17.github.io/wdd231/final-project/explore.html">
     <meta name="twitter:card" content="summary_large_image">
-    <title> Explore | Tasty Eats </title>
+    <title> My Recipies | Tasty Eats </title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/mobile-version.css">
@@ -18,10 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- <script src="scripts/main-scripts.js" defer></script> -->
     <script src="scripts/main-scripts.js" type="module" defer></script>
 </head>
-<body id="explore-page">
+<body id="myrecipies-page">
 
     <header class="box-shadow">
 
@@ -31,8 +31,8 @@
             <nav class="menu"">
                 <ul class="ul-li-styled nav-menu"">
                     <li><a href="index.html" >Home</a></li>
-                    <li><a href="#" class="active">Explore</a></li>
-                    <li><a href="myrecipies.html">My Recipies</a></li>
+                    <li><a href="explore.html" class="active">Explore</a></li>
+                    <li><a href="#">My Recipies</a></li>
                     <li><a href="">Search</a></li>
                 </ul>
             </nav>
@@ -41,28 +41,46 @@
         <button id="ham-menu" aria-label="Menu button"></button>
     </header>
 
-    <main class="container">
+    <main class="container myrecipies-main">
 
-        <div id="loading-screen" class="loading-screen">
-            <div class="loader">
-                <div class="spinner"></div>
-                <h2>Loading...</h2>
-            </div>
+        <h1>Create and Enjoy!</h1>
+        <div class="content-container">
+            <section id="my-recipies" class="my-recipies">
+
+                <h2>Your Recipies!</h2>
+
+                <div id="recipies-container" class="recipies-container">
+
+                </div>
+
+            </section>
+
+            <section class="add-recipie">
+                
+                <h2>Add your Recipie</h2>
+
+                <form id="recipeForm" class="recipies-form">
+                    <label>Recipe Name: <input type="text" id="recipeName" required></label>
+                    
+                
+                    <label>Ingredient: <input type="text" id="ingredient"></label>
+                    
+                    <button type="button" id="addIngredient" class="button btn-recipies-form">Add Ingredient</button>
+                
+                    <ul id="ingredientList" class="ul-li-styled ">
+                        <!-- <li id="placeholder">No ingredients added yet</li> -->
+                    </ul>
+                
+                    <label >Instructions: <textarea id="instructions" required></textarea></label>
+        
+                    <button type="submit" class="button btn-recipies-form">Save Recipe</button>
+                </form>
+
+                <dialog id="recipies-confirmation-modal"></dialog>
+            </section>
         </div>
-       
 
-        <div class="explore-menu">
-            <h1 id="explore-title">Categories</h1>
-            <button class="button btn-explore">Back</button>
-        </div>
-
-        <section id="explore-content" class="min-height">
-
-
-        </section>
-
-        <dialog id="meal-details-modal"></dialog>
-  
+        
     </main>
 
     <footer class="box-shadow">
@@ -71,8 +89,8 @@
             <p>Sing up for Weekly newsletters!</p>
 
             <form action="GET" class="newletters-form">
-                <input type="text" placeholder="Enter your name">
-                <input type="email" placeholder="Enter your email">
+                <input type="text" placeholder="Enter your name" name="name" autocomplete="name">
+                <input type="email" placeholder="Enter your email" name="email" autocomplete="name">
                 <input type="submit" value="SING UP" class="button">
             </form>
         </div>

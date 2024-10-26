@@ -372,7 +372,7 @@ input::placeholder {
     font-family: var(--Pacifo);
     text-align: center;
     font-size: 4rem;
-    margin: 8rem 0;
+    margin: 5rem 0;
 }
 
 .btn-explore {
@@ -571,4 +571,100 @@ dialog img {
     font-size: 4rem;
     color: var(--white);
     border-radius: 1rem;
+}
+
+/* styleing the my recipies page  */
+
+.dummy {
+    height: 20rem;
+}
+
+.myrecipies-main {
+    text-align: center;
+}
+
+.add-recipie {
+    margin-bottom: 5rem;
+}
+
+
+
+.recipies-form {
+    margin-bottom: 8rem;
+    padding: 5rem 1rem;
+    border-radius: 1rem;
+    border: 2px solid var(--Green);
+    max-width: 40rem;
+    margin: 0 auto;
+
+
+}
+
+.recipies-form ul {
+    min-height: 10rem;
+    border-radius: 1rem;
+    border: 2px solid var(--Blue);
+    width: 75%;
+    margin: 2rem 0 2rem 3rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+.recipies-form label {
+    display: block;
+    text-align: left;
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+
+
+.recipies-form input[type=text] {
+    display: block;
+    width: 80%;
+    height: 3rem;
+    border-radius: .5rem;
+    border: 1px solid #999;
+    border-left-width: 4px;
+    padding: .4rem;
+    margin: .3rem 0 1rem 0;
+}
+
+.recipies-form textarea {
+    display: block;
+    border-radius: .5rem;
+    border: 1px solid #999;
+    padding: .4rem;
+    margin-top: .3rem;
+    width: 80%;
+    height: 15rem;
+}
+
+.recipies-form input:required {
+    border-left-color: var(--Blue);
+}
+
+.recipies-form input:focus {
+    border-left-color: black; 
+    outline: none;
+}
+
+.btn-recipies-form {
+    width: 12rem;
+}
+
+.btn-recipies-form:last-of-type {
+    margin-top: 5rem;
+}
+
+.recipies-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.myrecipies-card {
+    background-image: url(../images/my-recipies-img/professional-chef-preparing-food-kitchen_23-2149727977.webp);
+    height: 12rem;
 }

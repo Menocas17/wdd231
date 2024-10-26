@@ -190,7 +190,33 @@
         font-weight: normal;
 
     }
+
+    /* Styling the my rcipies page  */
+
+    .content-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: flex-start;
+    }
+
+    .recipies-form {
+        width: 33rem;
+    }
+
+    .recipies-form input[type=text], .recipies-form textarea {
+        width: 90%;
+    }
+
+    .recipies-form ul {
+        width: 85%;
+    }
+
+    .myrecipies-card {
+        width: 35rem;
+    }
 }
+
 
 @media (min-width: 1000px) { 
     .nav-menu {
@@ -205,6 +231,14 @@
         right: 9rem;
         
     }
+
+    .recipies-form {
+        width: 40rem;
+    }
+
+    .myrecipies-card {
+        width: 40rem;
+    }
 }
 
 
@@ -218,6 +252,14 @@
     .btn-explore {
         right: 17rem;
     
+    }
+
+    .recipies-form {
+        width: 50rem;
+    }
+
+    .myrecipies-card {
+        width: 50rem;
     }
 }
 
