@@ -31,6 +31,8 @@ export const myRecipiesContent = async () => {
                 alert("Please enter a valid ingredient.");
             }
         });
+
+
         
         document.getElementById('recipeForm').addEventListener('submit', (event) => {
             event.preventDefault();
@@ -50,7 +52,6 @@ export const myRecipiesContent = async () => {
             ingredients.length = 0; 
             document.getElementById('ingredientList').innerHTML = '';
             location.reload(false);
-          
             
         });
         
@@ -59,10 +60,17 @@ export const myRecipiesContent = async () => {
     SaveRecipies();
 
     const displayRecipies = () => {
+
+        const cardPlaceHolder = document.querySelector('#new-recipie');
         const recipies = JSON.parse(localStorage.getItem('recipies')) || [];
         const recipiesContainer = document.querySelector('#recipies-container');
 
         recipies.forEach(recipie => {
+
+            if(!cardPlaceHolder.classList.contains('new-recipie')  && recipiesContainer.children.length >= 1){
+                cardPlaceHolder.classList.add('new-recipie')
+            }
+
             const article = document.createElement('article');
 
 
@@ -72,9 +80,7 @@ export const myRecipiesContent = async () => {
             `
 
             recipiesContainer.appendChild(article);
-        });
-
-        
+        });        
     }
 
     displayRecipies();

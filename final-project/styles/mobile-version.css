@@ -668,3 +668,7 @@ dialog img {
     background-image: url(../images/my-recipies-img/professional-chef-preparing-food-kitchen_23-2149727977.webp);
     height: 12rem;
 }
+
+.new-recipie {
+    display: none;
+}
