@@ -140,7 +140,7 @@
     /* styling the explore page  */
 
     .btn-explore {
-        right: 5rem;
+        right: 2rem;
         top: 2rem;
         font-size: 2rem;
     }
@@ -150,12 +150,26 @@
         grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
         gap: 3rem;
         justify-items: center;
+        height: auto;  
     }
 
     .explore-main {
         display:grid;
         grid-template-columns: 1fr 4fr 1fr;
     }
+
+    .min-height {
+        min-height: 80rem;        
+    }
+
+    /* .loading-screen {
+        left: 55rem;
+        top: 20rem;
+    } */
+
+    /* .loading-screen {
+        align-items: center
+    } */
 }
 
 @media (min-width: 1000px) { 
@@ -165,6 +179,11 @@
 
     .menu-footer {
         gap: 1rem;
+    }
+
+    .btn-explore {
+        right: 9rem;
+    
     }
 }
 
@@ -177,14 +196,8 @@
     }
 
     .btn-explore {
-        right: 18rem;
+        right: 17rem;
     
     }
 }
 
-@media (min-width: 1600px) { 
-    .btn-explore {
-        right: 35rem;
-    
-    }
-}

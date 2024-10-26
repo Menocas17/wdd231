@@ -41,10 +41,16 @@ export const filterByCategory = async (category) => { // Fetching the meals by c
         const filteredData = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
 
         if(!filteredData.ok) {
-            throw new Error (`Response status: ${response.status}`)
+            throw new Error (`Response status: ${filteredData.status}`)
         }
 
         const filteredCategory = await filteredData.json()
+
+        filteredCategory.meals.forEach(img => {
+            img.strMealThumb = `${imgixBaseUrl}/media/meals/${img.strMealThumb.split('/').pop()}?fm=webp`;
+        });
+
+
         console.log(filteredCategory.meals)
 
         return filteredCategory.meals
