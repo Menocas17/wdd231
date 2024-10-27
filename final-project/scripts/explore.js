@@ -46,7 +46,7 @@ export const displayMealDetails = async (idMeal) => {
         `;
     } else {
         
-        iframeContent = `<p class="iframe">Este platillo no tiene video disponible.</p>`;
+        iframeContent = `<p class="iframe">This meal does not a video available.</p>`;
     }
 
     mealModal.innerHTML = `
