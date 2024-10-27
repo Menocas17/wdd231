@@ -3,14 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find recipes tailored to your taste on TastyEats' search page! Discover new meal ideas by filtering through a variety of delicious recipes that cater to all preferences and dietary needs.">
+    <meta name="description" content="Thanks page for singing up for the new letters">
     <meta name="author" content="Rodolfo Menocal">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Find recipes tailored to your taste on TastyEats' search page! Discover new meal ideas by filtering through a variety of delicious recipes that cater to all preferences and dietary needs.">
-    <meta property="og:image" content="https://menocas17.github.io/wdd231/final-project/images/meta-img/search.webp">
-    <meta property="og:url" content="https://menocas17.github.io/wdd231/final-project/search.html">
-    <meta name="twitter:card" content="summary_large_image">
-    <title> Search | Tasty Eats </title>
+    <title> Thank You | Tasty Eats </title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/mobile-version.css">
@@ -18,9 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="scripts/main-scripts.js" type="module" defer></script>
+    <script src="scripts/main-scripts.js" type="module"></script>
 </head>
-<body id="search-page">
+<body id="thanks-page">
 
     <header class="box-shadow">
 
@@ -28,11 +23,11 @@
 
         <div>
             <nav class="menu">
-                <ul class="ul-li-styled nav-menu">
-                    <li><a href="index.html" >Home</a></li>
-                    <li><a href="explore.html" >Explore</a></li>
-                    <li><a href="myrecipies.html" >My Recipies</a></li>
-                    <li><a href="#" class="active">Search</a></li>
+                <ul class="ul-li-styled nav-menu"">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="myrecipies.html">My Recipies</a></li>
+                    <li><a href="search.html">Search</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,23 +35,21 @@
         <button id="ham-menu" aria-label="Menu button"></button>
     </header>
 
-    <main class=" search-main" id="search-main">
+    <main class="container thanks-container">
 
-        <div class="search-bar-container">
-            <div class="search-bar">
-                <h1 class="search-title">Tastys<span>Eats</span></h1>
-                <input type="text" id="search-bar" placeholder="Search by recipe name" required>
-                <button class="button btn-search" id="search-button">Search</button>
-            </div>
+        <h2 class="title">Congratulations!</h2>
+        <div class="thanks-message">
+            <p><strong id="current-date"></strong></p>
+            <p>Thank You for Singing Up for the Newsletters!</p>
+            <p>We appreciate your interest in becoming part of our family.</p>
+            <p>Here’s a summary of the information you provided:</p>
+            <ul class="ul-li-styled">
+                <li><strong>Name:</strong> <span id="user-name"></span></li>
+                <li><strong>Email:</strong> <span id="user-email"></span></li>                
+            </ul>
+
+            <a href="index.html"  class="button button-link btn-thanks">Continue</a>
         </div>
-
-       <section class="recipies-container-search explore-content container" id="recipies-container">
-
-       </section>
-        
-       
-    
-        <dialog id="meal-details-modal"></dialog>
         
     </main>
 
@@ -64,7 +57,7 @@
         <div class="form">
             <p>Ready to cook?</p>
             <p>Sing up for Weekly newsletters!</p>
-
+            
             <form method="GET" action="thankyou.html" class="newletters-form">
                 <input type="text" placeholder="Enter your name" name="name" autocomplete="name">
                 <input type="email" placeholder="Enter your email" name="email" autocomplete="email">
@@ -73,10 +66,10 @@
         </div>
         <div>
             <ul class="ul-li-styled nav-menu menu-footer">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="explore.html">Explore</a></li>
                 <li><a href="myrecipies.html">My Recipies</a></li>
-                <li><a href="#">Search</a></li>
+                <li><a href="search.html">Search</a></li>
             </ul>
         </div>
         <div class="social">

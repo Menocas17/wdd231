@@ -266,6 +266,10 @@
         display: grid;
     }
 
+    .btn-thanks{
+        font-size: 2rem;
+    }
+
     
 }
 

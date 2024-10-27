@@ -756,6 +756,17 @@ dialog img {
     display: flex;
 }
 
+.thanks-container {
+    text-align: center;
+}
+
+.thanks-message {
+    margin-bottom: 5rem;
+}
+
+.thanks-message ul {
+    margin-bottom: 5rem;
+}
 
 
 
