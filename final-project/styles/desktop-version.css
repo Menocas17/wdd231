@@ -79,6 +79,10 @@
         gap: 1rem;
     }
 
+    .menu.open {
+        height: auto;
+    }
+
     /* stylilng the footer  */
 
     footer {
