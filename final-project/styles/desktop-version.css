@@ -215,7 +215,30 @@
     .myrecipies-card {
         width: 35rem;
     }
+
+    .myrecipies-title {
+        font-size: 5rem;
+    }
+
+    .myrecipies-main{
+        position: relative;
+    }
+
+
+    .img-recipies-bg{
+        display: block;
+        position: absolute;
+        top: 3rem;
+        right: 0rem;
+        width: 20rem;
+        transform: rotate(8deg);
+    }
+
+
 }
+
+
+
 
 
 @media (min-width: 1000px) { 
@@ -239,6 +262,7 @@
     .myrecipies-card {
         width: 40rem;
     }
+
 }
 
 
@@ -260,6 +284,20 @@
 
     .myrecipies-card {
         width: 50rem;
+    }
+
+    .img-recipies-bg {
+        top: 2rem;
+        right: 3rem;
+        width: 22rem;
+    }
+}
+
+@media (min-width: 1800px) { 
+    .img-recipies-bg{
+        top: 0rem;
+        right: 23rem;
+        width: 26rem;
     }
 }
 

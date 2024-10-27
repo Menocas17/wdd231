@@ -65,7 +65,7 @@ export const myRecipiesContent = async () => {
         const recipies = JSON.parse(localStorage.getItem('recipies')) || [];
         const recipiesContainer = document.querySelector('#recipies-container');
 
-        recipies.forEach(recipie => {
+        recipies.forEach((recipie, index) => {
 
             if(!cardPlaceHolder.classList.contains('new-recipie')  && recipiesContainer.children.length >= 1){
                 cardPlaceHolder.classList.add('new-recipie')
@@ -73,17 +73,47 @@ export const myRecipiesContent = async () => {
 
             const article = document.createElement('article');
 
-
+            article.dataset.id = index;
             article.classList.add('explore-card', 'myrecipies-card')
             article.innerHTML = `
                     <h2 class="explore-card-content">${recipie.name}</h2>
             `
+            article.addEventListener('click', () => {
+                const articleId = article.dataset.id;
+
+                displayMyRecipie(articleId, recipies);
+            })
+
+
 
             recipiesContainer.appendChild(article);
         });        
     }
 
     displayRecipies();
+    const displayMyRecipie = (mealIndex, recipiesData) => {
+        const { name, ingredients, instructions } = recipiesData[mealIndex];
+        const mealDetailsModal = document.querySelector('#meal-details-modal');
+    
+       
+        const ingredientListHTML = ingredients.map(ingredient => `<li>${ingredient}</li>`).join('');
+    
+        mealDetailsModal.innerHTML = `
+            <h3>${name}</h3>
+            <button id="closeModal">X</button>
+            <div class="container modal-container">
+                <h4>Ingredients</h4>
+                <ul class="ul-li-styled">${ingredientListHTML}</ul>
+                <h4>Instructions</h4>
+                <p class="instructions">${instructions}</p>
+            </div>
+        `;
+    
+    
+        mealDetailsModal.showModal();
 
+        document.querySelector('#closeModal').addEventListener('click', () => {
+            mealDetailsModal.close();
+        });
+    }
 }
-

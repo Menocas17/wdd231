@@ -1,7 +1,7 @@
 :root {
     --Green: #88CB27;
     --Blue: #13548f;
-    --Beige: #ffffd8af;
+    --Beige: #ffffd8b5;
     --black: #000;
     --white: #FFFFFF;
 
@@ -581,12 +581,9 @@ dialog img {
 
 .myrecipies-main {
     text-align: center;
+    background-color: var(--Beige);
+    padding: 5rem 0rem;
 }
-
-.add-recipie {
-    margin-bottom: 5rem;
-}
-
 
 
 .recipies-form {
@@ -608,6 +605,7 @@ dialog img {
     margin: 2rem 0 2rem 3rem;
     padding: 1rem;
     text-align: left;
+    background-color: var(--white);
 }
 
 .recipies-form label {
@@ -671,4 +669,19 @@ dialog img {
 
 .new-recipie {
     display: none;
+}
+
+.myrecipies-title {
+    font-family: var(--Pacifo);
+    margin-bottom:  8rem;
+    font-size: 4rem;
+    
+}
+
+.my-recipies {
+    margin-bottom: 5rem;
+}
+
+.img-recipies-bg {
+    display: none
 }
