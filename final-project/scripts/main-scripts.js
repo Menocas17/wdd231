@@ -1,5 +1,6 @@
 import { exploreContent } from "./explore.js";
 import { myRecipiesContent } from "./myrecipies.js";
+import { searchMeal } from "./search.js";
 
 
 // Scripts for handeling the ham button 
@@ -19,6 +20,10 @@ if (document.body.id === 'explore-page'){
 
 if (document.body.id === 'myrecipies-page') {
     myRecipiesContent();
+}
+
+if(document.body.id === 'search-page') {
+    searchMeal();
 }
 
 

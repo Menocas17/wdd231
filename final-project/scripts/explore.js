@@ -9,12 +9,84 @@ const hideLoadingScreen = () => {
 };
 
 
+export const displayMealDetails = async (idMeal) => {
+    const mealModal = document.querySelector('#meal-details-modal');
+    const mealData = await fetchingMeal(idMeal);
+
+    const ingredients = [];
+    const measures = [];
+
+    for (let i = 1; i <= 20; i++) {
+        const ingredient = mealData[`strIngredient${i}`];
+        const measure = mealData[`strMeasure${i}`];
+
+
+        if (ingredient) {
+            ingredients.push(ingredient);
+            measures.push(measure || ''); 
+        }
+    }
+
+    const ingredientsList = ingredients.map((ingredient, index) => {
+        return `<li>${measures[index]} ${ingredient}</li>`;
+    }).join('');
+
+
+    let iframeContent = '';
+    if (mealData.strYoutube) {
+    
+        const videoId = mealData.strYoutube.split('v=')[1].split('&')[0];
+        
+       
+        iframeContent = `
+            <iframe class = "iframe" width="560" height="315" src="https://www.youtube.com/embed/${videoId}" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+        `;
+    } else {
+        
+        iframeContent = `<p class="iframe">Este platillo no tiene video disponible.</p>`;
+    }
+
+    mealModal.innerHTML = `
+
+
+        <h3>${mealData.strMeal}</h3>
+        <button id="closeModal">X</button>
+
+        
+        <img src="${mealData.strMealThumb}" class="box-shadow" loading="lazy" width="350" height="350">
+
+        <div class="container modal-container">
+            <h4>Ingredients</h4>
+            <ul class="ul-li-styled">
+                ${ingredientsList}
+            </ul>
+            <h4>Instructions</h4>
+            <p class="instructions">${mealData.strInstructions}</p>
+            <h4>Video Tutorial</h4>
+            ${iframeContent}
+            <a class="button button-link btn-modal" href="${mealData.strSource}">Nutritional Info</a>
+        </div>
+        
+
+    `
+
+    mealModal.showModal();
+
+    document.querySelector('#closeModal').addEventListener('click', () => {
+        mealModal.close();
+    });
+
+}
+
+
 export const exploreContent = async () => { // This function will display all the categories when the user goes to the explore page
 
     const exploreSection = document.querySelector('#explore-content'); 
     const btnExplore = document.querySelector('.btn-explore');
     const categoryTitle = document.querySelector('#explore-title');
-    const mealModal = document.querySelector('#meal-details-modal');
     let fragment = document.createDocumentFragment();
 
 
@@ -112,79 +184,6 @@ export const exploreContent = async () => { // This function will display all th
         exploreSection.classList.toggle('min-height');
 
     }
-
-    const displayMealDetails = async (idMeal) => {
-
-        const mealData = await fetchingMeal(idMeal);
-
-        const ingredients = [];
-        const measures = [];
-
-        for (let i = 1; i <= 20; i++) {
-            const ingredient = mealData[`strIngredient${i}`];
-            const measure = mealData[`strMeasure${i}`];
-
-  
-            if (ingredient) {
-                ingredients.push(ingredient);
-                measures.push(measure || ''); 
-            }
-        }
-
-        const ingredientsList = ingredients.map((ingredient, index) => {
-            return `<li>${measures[index]} ${ingredient}</li>`;
-        }).join('');
-
-
-        let iframeContent = '';
-        if (mealData.strYoutube) {
-        
-            const videoId = mealData.strYoutube.split('v=')[1].split('&')[0];
-            
-           
-            iframeContent = `
-                <iframe class = "iframe" width="560" height="315" src="https://www.youtube.com/embed/${videoId}" 
-                        title="YouTube video player" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen></iframe>
-            `;
-        } else {
-            
-            iframeContent = `<p class="iframe">Este platillo no tiene video disponible.</p>`;
-        }
-
-        mealModal.innerHTML = `
-
-    
-            <h3>${mealData.strMeal}</h3>
-            <button id="closeModal">X</button>
-
-            
-            <img src="${mealData.strMealThumb}" class="box-shadow" loading="lazy" width="350" height="350">
-
-            <div class="container modal-container">
-                <h4>Ingredients</h4>
-                <ul class="ul-li-styled">
-                    ${ingredientsList}
-                </ul>
-                <h4>Instructions</h4>
-                <p class="instructions">${mealData.strInstructions}</p>
-                <h4>Video Tutorial</h4>
-                ${iframeContent}
-                <a class="button button-link btn-modal" href="${mealData.strSource}">Nutritional Info</a>
-            </div>
-            
-
-        `
-
-        mealModal.showModal();
-
-        document.querySelector('#closeModal').addEventListener('click', () => {
-            mealModal.close();
-        });
-    
-    }
-
 
     displayAllCategories();
 

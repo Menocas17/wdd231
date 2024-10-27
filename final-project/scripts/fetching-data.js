@@ -83,17 +83,28 @@ export const filterByMainIngridient = async (ingridient) => { // Fetching the me
         const ingridentData = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingridient}`)
 
         if(!ingridentData.ok) {
-            throw new Error (`Response status: ${response.status}`)
+            throw new Error (`Response status: ${ingridentData.status}`)
         }
 
         const ingrident = await ingridentData.json()
 
-        console.log(ingrident.meals)
-
-        return ingrident.meals
+        if( await ingrident.meals) {
+            ingrident.meals.forEach(img => {
+                img.strMealThumb = `${imgixBaseUrl}/media/meals/${img.strMealThumb.split('/').pop()}?fm=webp`;
+            });
+    
+        
+            return ingrident.meals
+        }
+    
+        else {
+            console.warn("No meals found for this ingredient.");
+            return []; 
+        }
 
     } catch (error) {
-        console.error(error.message);
+        console.error("Error fetching data", error.message);
+        return [];
     }
 
 
@@ -104,13 +115,17 @@ export const filterByName = async (mealName) => { // Fetching the meal by name
         const mealData = await fetch (`https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`)
 
         if(!mealData.ok) {
-            throw new Error (`Response status: ${response.status}`)
+            throw new Error (`Response status: ${mealData.status}`)
         }
 
         const mealFound = await mealData.json();
+
+        mealFound.strMealThumb = `${imgixBaseUrl}/media/meals/${mealFound.meals[0].strMealThumb.split('/').pop()}?fm=webp`;
         console.log(mealFound.meals[0])
         return mealFound.meals[0]
-    } catch (error) {
+        } 
+        
+        catch (error) {
         console.error(error.message);
     }
 } 

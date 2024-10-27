@@ -412,7 +412,7 @@ input::placeholder {
     }
 }
 
-#explore-content {
+.explore-content {
     display: flex;
     flex-direction: column;
     height: auto;
@@ -695,3 +695,67 @@ dialog img {
 #deleteRecipe:hover {
     transform: scale(1.10);
 }
+
+/* Styling the search page  */ 
+
+.search-title {
+    font-family: var(--Pacifo);
+    color: var(--Green);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 4rem;
+}
+.search-title span {
+    color: var(--black);
+    
+}
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.search-bar input {
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+    width: 80%;
+}
+
+.search-bar-container {
+    min-height: 36rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.btn-search {
+    font-weight: 700;
+}
+
+.recipies-not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.recipies-container-search {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.recipies-container-search-show {
+    display: flex;
+}
+
+
+
+

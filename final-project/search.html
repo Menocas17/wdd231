@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TastyEats is your go-to online recipes website offering delicious meal ideas for all tastes and dietary needs. Easily save your favorite recipes locally, organize them in one place, and get inspired to cook something new every day!">
+    <meta name="description" content="Find recipes tailored to your taste on TastyEats' search page! Discover new meal ideas by filtering through a variety of delicious recipes that cater to all preferences and dietary needs.">
     <meta name="author" content="Rodolfo Menocal">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="TastyEats is your go-to online recipes website offering delicious meal ideas for all tastes and dietary needs. Easily save your favorite recipes locally, organize them in one place, and get inspired to cook something new every day!">
-    <meta name="author" content="Rodolfo Menocal">
-    <meta property="og:image" content="https://menocas17.github.io/wdd231/final-project/images/meta-img/myrecipies.webp">
-    <meta property="og:url" content="https://menocas17.github.io/wdd231/final-project/explore.html">
+    <meta property="og:description" content="Find recipes tailored to your taste on TastyEats' search page! Discover new meal ideas by filtering through a variety of delicious recipes that cater to all preferences and dietary needs.">
+    <meta property="og:image" content="https://menocas17.github.io/wdd231/final-project/images/meta-img/search.webp">
+    <meta property="og:url" content="https://menocas17.github.io/wdd231/final-project/search.html">
     <meta name="twitter:card" content="summary_large_image">
-    <title> My Recipies | Tasty Eats </title>
+    <title> Search | Tasty Eats </title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/mobile-version.css">
@@ -21,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="scripts/main-scripts.js" type="module" defer></script>
 </head>
-<body id="myrecipies-page">
+<body id="search-page">
 
     <header class="box-shadow">
 
@@ -32,8 +31,8 @@
                 <ul class="ul-li-styled nav-menu"">
                     <li><a href="index.html" >Home</a></li>
                     <li><a href="explore.html" >Explore</a></li>
-                    <li><a href="#" class="active">My Recipies</a></li>
-                    <li><a href="search.html">Search</a></li>
+                    <li><a href="myrecipies.html" >My Recipies</a></li>
+                    <li><a href="#" class="active">Search</a></li>
                 </ul>
             </nav>
         </div>
@@ -41,51 +40,21 @@
         <button id="ham-menu" aria-label="Menu button"></button>
     </header>
 
-    <main class=" myrecipies-main">
+    <main class=" search-main" id="search-main">
 
-       
-        <h1 class="myrecipies-title">Create and Enjoy!</h1>
-        <div class="content-container container">
-            <section id="my-recipies" class="my-recipies">
-
-                <h2>Your Recipies!</h2>
-
-                <div id="recipies-container" class="recipies-container">
-
-                    <article class="explore-card myrecipies-card" id="new-recipie">
-                        <h2 class="explore-card-content">Enter new Recipies</h2>
-                    </article>
-
-                </div>
-
-            </section>
-
-            <section class="add-recipie">
-                
-                <h2>Add your Recipie</h2>
-
-                <form id="recipeForm" class="recipies-form">
-                    <label>Recipe Name: <input type="text" id="recipeName" required></label>
-                    
-                
-                    <label>Ingredient: <input type="text" id="ingredient"></label>
-                    
-                    <button type="button" id="addIngredient" class="button btn-recipies-form">Add Ingredient</button>
-                
-                    <ul id="ingredientList" class="ul-li-styled ">
-                        <!-- <li id="placeholder">No ingredients added yet</li> -->
-                    </ul>
-                
-                    <label >Instructions: <textarea id="instructions" required></textarea></label>
-        
-                    <button type="submit" class="button btn-recipies-form">Save Recipe</button>
-                </form>
-
-                
-            </section>
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <h1 class="search-title">Tastys<span>Eats</span></h1>
+                <input type="text" id="search-bar" placeholder="Search by recipe name" required>
+                <button class="button btn-search" id="search-button">Search</button>
+            </div>
         </div>
 
-        <img src="./images/my-recipies-img/chef.webp" alt="" class="img-recipies-bg">
+       <section class="recipies-container-search explore-content container" id="recipies-container">
+
+       </section>
+        
+       
     
         <dialog id="meal-details-modal"></dialog>
         
@@ -106,8 +75,8 @@
             <ul class="ul-li-styled nav-menu menu-footer"">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="explore.html">Explore</a></li>
-                <li><a href="#">My Recipies</a></li>
-                <li><a href="search.html">Search</a></li>
+                <li><a href="myrecipies.html">My Recipies</a></li>
+                <li><a href="#">Search</a></li>
             </ul>
         </div>
         <div class="social">
