@@ -91,6 +91,8 @@ export const myRecipiesContent = async () => {
     }
 
     displayRecipies();
+
+
     const displayMyRecipie = (mealIndex, recipiesData) => {
         const { name, ingredients, instructions } = recipiesData[mealIndex];
         const mealDetailsModal = document.querySelector('#meal-details-modal');
@@ -106,6 +108,7 @@ export const myRecipiesContent = async () => {
                 <ul class="ul-li-styled">${ingredientListHTML}</ul>
                 <h4>Instructions</h4>
                 <p class="instructions">${instructions}</p>
+                <button id="deleteRecipe" class="button delete-button">Delete Recipe</button>
             </div>
         `;
     
@@ -115,5 +118,17 @@ export const myRecipiesContent = async () => {
         document.querySelector('#closeModal').addEventListener('click', () => {
             mealDetailsModal.close();
         });
+
+        document.querySelector('#deleteRecipe').addEventListener('click', () => {
+            deleteRecipe(mealIndex);
+            mealDetailsModal.close();
+        });
+
+        const deleteRecipe = (index) => {
+            const recipies = JSON.parse(localStorage.getItem('recipies')) || [];
+            recipies.splice(index, 1); 
+            localStorage.setItem('recipies', JSON.stringify(recipies)); 
+            location.reload(false)
+        };
     }
 }

@@ -685,3 +685,13 @@ dialog img {
 .img-recipies-bg {
     display: none
 }
+
+#deleteRecipe{
+    background-color: rgb(197, 64, 64);
+    color: var(--white);
+    transition: transform .3s ease-in;
+}
+
+#deleteRecipe:hover {
+    transform: scale(1.10);
+}
